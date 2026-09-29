@@ -1,14 +1,11 @@
-# AI Infra 2.0 — The Pitch
-
-*Edited from Voice #01 (4:32 raw → ~3:00 read aloud). Written to be signed by every participating company.*
-
+# AI Infra 2.0 Manifesto
 ---
 
 **What is AI Infra 2.0?**
 
-AI Infra 2.0 is a shared foundation: startups, advanced developers, and enterprises building one common infrastructure for AI compute and data.
+AI Infra 2.0 is a shared foundation: startups, advanced developers, and enterprises building a common infrastructure for AI compute and data.
 
-Today that infrastructure is fragmented. Our data lives in lakehouses, streaming systems, RAG stores, and graph databases, and none of them speak the same language. Agents trade slow JSON, serializing and deserializing at every hop, when they could be passing Apache Arrow batches with zero copies. It's impedance mismatch everywhere.
+Today AI infrastructure is fragmented. Our data lives in lakehouses, streaming systems, RAG stores, and graph databases, and none of them speak the same language. Agents trade slow JSON, serializing and deserializing at every hop, when they could be passing Apache Arrow batches with zero copies. It's impedance mismatch everywhere.
 
 Take the most common case: a Python agent talking to a JVM-based lakehouse engine. Every call crosses the JVM boundary, and then crosses back. Amdahl's law is unforgiving here. However much you speed up the engine, the boundary tax caps your gains.
 
@@ -22,7 +19,7 @@ AI is only as good as the data you can feed it. Native, Arrow-first infrastructu
 
 **This is already happening**
 
-On July 27, 2026, ten teams presented at **Rust AI Begins** at AWS Builder Loft in San Francisco. They included startups, open-source projects, and enterprises. None of them argued that every AI system should be rewritten in Rust. They showed something more concrete: Rust is becoming the layer under the interfaces developers already use.
+On July 27, 2026, ten teams presented at **Rust AI Begins** at AWS Builder Loft in San Francisco. They included startups, open-source projects, and enterprises. None of them argued that every AI system should be rewritten in Rust. They showed something more concrete: Rust is becoming the layer under the interfaces developers already use. On September 9, Rust.ai came to Amsterdam. Our message resonates as more and more companies choose to build fast, interoperable AI Infra 2.0 powered by Apache Arrow, Apache DataFusion, ADBC, and other Rust/Zig/C++/native frameworks.
 
 The talks covered every layer of the AI data stack:
 - lakehouse execution
@@ -67,3 +64,4 @@ If you're building in this ecosystem, come show what you've built, and interop w
 - **QueryGraph**: a semantic layer with type-level security (TypeSec).
 - **Temporal**: a durable agent loop in Rust that survives redeployment.
 - **Valkey**: the GLIDE client core, a Rust SDK for modules, and Valkey-Bloom.
+- **Ladybug**. an Arrow-first graph database, disk format and memory.
