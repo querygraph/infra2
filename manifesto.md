@@ -59,7 +59,6 @@ If you're building in this ecosystem, come show what you've built, and interop w
 - **CocoIndex**: a Rust context engine that keeps AI indices and knowledge graphs in sync as the source data changes.
 - **Columnar**: ADBC, Arrow-native database connectivity for agents, in place of row-oriented APIs.
 - **Databricks**: delta-kernel-rs, a shared Rust kernel for the Delta Lake protocol, used by DuckDB, Polars, DataFusion, and other engines.
-- **Eventual**: Daft, running Python coroutines on a Rust Tokio runtime through PyO3.
 - **Polygres**: pgGraph and pgContext, cache-conscious graph traversal and retrieval inside PostgreSQL.
 - **QueryGraph**: a semantic layer with type-level security (TypeSec).
 - **Temporal**: a durable agent loop in Rust that survives redeployment.
